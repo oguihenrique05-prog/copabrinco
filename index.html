@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincos de Crochê do Brasil - Fature de R$ 2.000 a R$ 5.000/mês</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" as="image" href="imagem1.webp" fetchpriority="high">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brasil: {
+                            green: '#009c3b',
+                            greenDark: '#007a2e',
+                            greenLight: '#e6f7ec',
+                            yellow: '#ffdf00',
+                            blue: '#002776',
+                            blueLight: '#eef2fb',
+                        }
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #ffffff; color: #1f2937; overflow-x: hidden; }
+        
+        /* Botão de Compra - Foco em Alta Conversão com Verde Brasil */
+        .btn-success {
+            background-color: #009c3b;
+            color: white;
+            box-shadow: 0 10px 25px -5px rgba(0, 156, 59, 0.5), 0 8px 10px -6px rgba(0, 156, 59, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-success:hover {
+            background-color: #007a2e;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 156, 59, 0.5), 0 8px 10px -6px rgba(0, 156, 59, 0.1);
+        }
+
+        /* Comentários Estilo Facebook */
+        .fb-bubble { background-color: #f3f4f6; padding: 12px 16px; border-radius: 18px; position: relative; display: inline-block; width: 100%; }
+        .fb-reactions {
+            position: absolute; right: -5px; bottom: -12px; display: flex; align-items: center; gap: 4px;
+            background: #ffffff; border-radius: 14px; padding: 2px 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            font-size: 12px; color: #65676b; font-weight: 400; z-index: 2;
+        }
+        
+        /* CAIXA DE PREÇO EXATA */
+        .offer-box-replica {
+            background-color: #ffffff;
+            border: 2px solid #eef2fb; 
+            border-radius: 28px;
+            padding: 32px 24px;
+            box-shadow: 0 10px 40px -10px rgba(0, 39, 118, 0.1);
+            display: inline-block;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .offer-box-replica .text-top {
+            color: #64748b;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+        .offer-box-replica .text-price {
+            color: #002776; /* Azul Brasil */
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+        .offer-box-replica .text-bottom {
+            color: #94a3b8;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .bg-split-brasil {
+            background: linear-gradient(110deg, #0047fa 55%, #ffdf00 55%);
+            position: relative;
+        }
+        .bg-split-brasil::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.1) 120%);
+            pointer-events: none;
+        }
+        .hero-text-shadow {
+            -webkit-text-stroke: 2px #0a1128;
+            text-shadow: 
+                3px 3px 0 #0a1128, 
+                4px 4px 0 #0a1128, 
+                5px 5px 0 #0a1128, 
+                6px 6px 0 #0a1128, 
+                7px 7px 0 #0a1128;
+        }
+        .hero-text-yellow {
+            color: #ffdf00;
+            -webkit-text-stroke: 2px #0a1128;
+            text-shadow: 
+                3px 3px 0 #0a1128, 
+                4px 4px 0 #0a1128, 
+                5px 5px 0 #0a1128, 
+                6px 6px 0 #0a1128, 
+                7px 7px 0 #0a1128;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brasil-green selection:text-white">
+
+    <!-- SECTION 1: HERO / PROMESSA -->
+    <header class="relative bg-split-brasil pt-12 pb-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                
+                <div class="text-center lg:text-left flex flex-col justify-center mt-4">
+                    
+                    <!-- Headline Estilo Imagem -->
+                    <div class="transform -rotate-3 -skew-x-6 mb-8 mt-4">
+                        <h1 class="font-heading font-black leading-[0.95] tracking-tight flex flex-col items-center lg:items-start">
+                            <span class="text-white text-6xl sm:text-7xl md:text-[5.5rem] hero-text-shadow">BRINCO</span>
+                            <span class="text-white text-6xl sm:text-7xl md:text-[5.5rem] hero-text-shadow flex items-center gap-3">
+                                BRASIL <span class="text-5xl sm:text-6xl md:text-[4.5rem] translate-y-1">🇧🇷</span>
+                            </span>
+                            <span class="hero-text-yellow text-5xl sm:text-6xl md:text-[4.5rem] mt-2">FÁCIL E</span>
+                            <span class="hero-text-yellow text-5xl sm:text-6xl md:text-[4.5rem]">LUCRATIVO</span>
+                        </h1>
+                    </div>
+                    
+                    <!-- Subtítulo e Botão em um card para leitura clara -->
+                    <div class="bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-3xl shadow-2xl border-2 border-white/50 inline-block max-w-xl mx-auto lg:mx-0">
+                        <div class="inline-block bg-[#ffdf00] text-[#002776] font-bold px-3 py-1 rounded-full text-xs mb-4 shadow-sm uppercase tracking-wider">
+                            Oportunidade Imediata
+                        </div>
+                        
+                        <p class="text-[17px] text-gray-800 mb-6 font-medium leading-relaxed">
+                            Aprenda a fazer do zero os <strong>brincos de crochê da torcida</strong> e aproveite a febre dos jogos para faturar mais de <strong>R$ 500</strong> usando apenas linha e agulha na sua casa.
+                        </p>
+
+                        <div>
+                            <a href="#oferta" class="btn-success block w-full text-center font-black text-xl py-4 sm:py-5 px-6 rounded-2xl animate-pulse-fast uppercase tracking-wide">
+                                SIM! QUERO LUCRAR NA COPA
+                            </a>
+                            <p class="text-xs text-gray-500 mt-3 font-bold flex items-center justify-center gap-1.5 uppercase">
+                                🔒 Compra Segura • Acesso Imediato
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mx-auto w-full max-w-md lg:max-w-lg mt-8 lg:mt-0">
+                    <!-- Placeholder simulando os brincos recortados flutuando -->
+                    <img src="imagem1.webp" onerror="this.onerror=null; this.src='https://placehold.co/600x600/009c3b/ffdf00?text=Brincos+Girassol+Brasil';" alt="Brincos de Crochê do Brasil" class="relative z-10 w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.4)] animate-float hover:scale-105 transition-transform duration-500" fetchpriority="high">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2: CONEXÃO COM O PÚBLICO -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col-reverse md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2 relative">
+                    <img src="imagem2.webp" onerror="this.onerror=null; this.src='https://placehold.co/450x350/ffdf00/002776?text=Fazendo+Crochê';" alt="Mulher fazendo crochê" class="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-lg" loading="lazy">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <span class="text-brasil-green font-bold tracking-wider uppercase text-sm mb-2 block">Mesmo que nunca tenha pego numa agulha</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tight leading-tight">
+                        A oportunidade de ouro para ter <span class="text-brasil-blue">renda extra rápida</span> na época de jogos.
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        A Copa do Mundo cria uma febre nacional. As mulheres querem estar lindas e no clima dos jogos. O brinco de crochê tem um custo de fabricação de centavos e pode ser vendido facilmente por R$ 25 a R$ 40. É a sua chance de multiplicar seu dinheiro rápido!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: O QUE VOCÊ VAI APRENDER -->
+    <section class="py-20 bg-[#f8fcf9]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
+                    O passo a passo para criar <span class="text-brasil-green">joias em formato de torcida</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Materiais Exatos: As melhores linhas e agulhas</span>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Pontos Básicos do Zero (Para iniciantes)</span>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Técnica de Engomagem: Brincos duros e perfeitos</span>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Como fixar argolas e anzóis com segurança</span>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Aprenda mais de 10 modelos diferentes com passo a passo</span>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Precificação Exata para não ter prejuízo</span>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Instagram: Como tirar fotos que vendem sozinhas</span>
+                </div>
+
+                <div class="flex items-center gap-4 bg-white px-6 py-5 rounded-2xl shadow-sm border border-gray-100 hover:border-brasil-green transition-colors">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-brasil-greenLight flex items-center justify-center text-brasil-green">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <span class="font-bold text-gray-800 text-[15px]">Abordagem de vendas no WhatsApp</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: BÔNUS INCLUSOS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-gray-900 mb-4 tracking-tight uppercase">
+                    Você ainda vai receber <br><span class="text-brasil-blue">Todos esses Bônus</span>
+                </h2>
+                <p class="text-lg text-gray-600 font-medium">Garanta sua vaga hoje e leve um kit completo para multiplicar suas vendas.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="w-full lg:w-1/2">
+                    <img src="imagem6.webp" onerror="this.onerror=null; this.src='https://placehold.co/400x400/eef2fb/002776?text=Mockup+Bônus+Brasil';" alt="Mockup dos bônus" class="w-full max-w-md mx-auto h-auto object-contain" loading="lazy">
+                </div>
+                
+                <div class="w-full lg:w-1/2 space-y-4">
+                    <div class="flex gap-4 p-5 bg-gray-50 rounded-2xl border border-gray-100 transition hover:border-brasil-yellow">
+                        <div class="text-3xl">📱</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Script de Vendas: "A Torcedora"</h4>
+                            <p class="text-gray-600 text-sm mt-1">Textos prontos para enviar em grupos de WhatsApp e fazer suas amigas encomendarem na hora.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-5 bg-gray-50 rounded-2xl border border-gray-100 transition hover:border-brasil-yellow">
+                        <div class="text-3xl">🏷️</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Pack de Tags Personalizadas (Canva)</h4>
+                            <p class="text-gray-600 text-sm mt-1">Modelos de "cartelinhas" nas cores do Brasil para você imprimir e prender os brincos, valorizando seu produto.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-5 bg-gray-50 rounded-2xl border border-gray-100 transition hover:border-brasil-yellow">
+                        <div class="text-3xl">🧮</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Planilha de Custo de Fios e Ferragens</h4>
+                            <p class="text-gray-600 text-sm mt-1">Descubra exatamente quantos centavos você gasta em cada brinco e calcule seu lucro líquido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: PROVA SOCIAL -->
+    <section class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-gray-900 mb-4 tracking-tight">O que as alunas estão <span class="text-brasil-green">faturando:</span></h2>
+                <p class="text-gray-600 text-lg">Depoimentos reais na nossa comunidade de artesãs.</p>
+            </div>
+
+            <div class="space-y-6 max-w-2xl mx-auto mb-16">
+                <!-- Comentário 1 -->
+                <div class="flex gap-3">
+                    <div class="w-10 h-10 rounded-full bg-green-200 text-green-800 flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-sm">J</div>
+                    <div class="flex-1">
+                        <div class="fb-bubble text-left shadow-sm">
+                            <p class="font-bold text-gray-900 text-[14px] mb-1">Juliana Costa</p>
+                            <p class="text-gray-800 text-[14px] leading-snug">Meninas, a técnica da engomagem é perfeita! 😱 Meus brincos da bandeira ficaram super durinhos e não dobram por nada. Postei foto hoje de manhã e já peguei encomenda de 15 pares pro pessoal do escritório!! 🙏🏻</p>
+                            <div class="fb-reactions"><span>👍</span><span>❤️</span> <span>112</span></div>
+                        </div>
+                        <div class="text-[11px] text-gray-500 font-semibold mt-1.5 ml-3 space-x-3">
+                            <span class="cursor-pointer hover:underline">Curtir</span>
+                            <span class="cursor-pointer hover:underline">Responder</span>
+                            <span class="font-normal">1 h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentário 2 -->
+                <div class="flex gap-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-200 text-blue-800 flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-sm">M</div>
+                    <div class="flex-1">
+                        <div class="fb-bubble text-left shadow-sm">
+                            <p class="font-bold text-gray-900 text-[14px] mb-1">Mariana Lopes</p>
+                            <p class="text-gray-800 text-[14px] leading-snug">Eu não sabia fazer nem o ponto correntinha kkkk 😂 Mas a professora ensina tão bem de pertinho que fiz meu primeiro par ontem à noite. Gastei nem R$ 20 de material e dá pra fazer uns 30 brincos fácil!</p>
+                            <div class="fb-reactions"><span>❤️</span><span>😮</span> <span>89</span></div>
+                        </div>
+                        <div class="text-[11px] text-gray-500 font-semibold mt-1.5 ml-3 space-x-3">
+                            <span class="cursor-pointer hover:underline">Curtir</span>
+                            <span class="cursor-pointer hover:underline">Responder</span>
+                            <span class="font-normal">3 h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentário 3 -->
+                <div class="flex gap-3">
+                    <div class="w-10 h-10 rounded-full bg-yellow-200 text-yellow-800 flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-sm">R</div>
+                    <div class="flex-1">
+                        <div class="fb-bubble text-left shadow-sm">
+                            <p class="font-bold text-gray-900 text-[14px] mb-1">Rafaela Mendes</p>
+                            <p class="text-gray-800 text-[14px] leading-snug">Usem os scripts de vendas do WhatsApp! Mandei no grupo da família e das mães da escola, vendi 22 pares só hoje e ainda me pediram as tiaras que tão de bônus. Feliz demais 😍💚💛</p>
+                            <div class="fb-reactions"><span>👍</span><span>❤️</span> <span>204</span></div>
+                        </div>
+                        <div class="text-[11px] text-gray-500 font-semibold mt-1.5 ml-3 space-x-3">
+                            <span class="cursor-pointer hover:underline">Curtir</span>
+                            <span class="cursor-pointer hover:underline">Responder</span>
+                            <span class="font-normal">5 h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-brasil-blue font-bold mb-4 uppercase tracking-wider text-sm">Mais de 1.000 alunas lucrando na Copa</p>
+                <img src="imagem7.webp" onerror="this.onerror=null; this.src='https://placehold.co/400x250/e6f7ec/009c3b?text=Comunidade+Artesãs';" alt="Comunidade ativa" class="w-full max-w-md mx-auto rounded-lg shadow-md" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: OFERTA FINAL E GARANTIA -->
+    <section id="oferta" class="py-20 bg-brasil-blueLight relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            
+            <h2 class="font-heading text-4xl md:text-5xl font-black text-[#111827] mb-2 tracking-tight uppercase">
+                A HORA DE LUCRAR É <span class="text-brasil-green">AGORA</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-8 font-medium">Curso Completo + Todos os Bônus Inclusos</p>
+            
+            <div class="max-w-md mx-auto bg-white rounded-[24px] p-7 sm:p-8 mb-8 shadow-[0_8px_30px_rgba(0,39,118,0.08)] border border-gray-100 text-left">
+                <h4 class="font-bold text-[#1e293b] mb-6 text-center text-[15px] uppercase tracking-wide">
+                    Tudo que você está levando hoje:
+                </h4>
+                <ul class="space-y-3.5 text-[14px] md:text-[15px] font-semibold text-[#334155]">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brasil-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> 
+                        <span>Aulas passo a passo (Do zero ao avançado)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brasil-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> 
+                        <span>Mais de 10 Modelos Diferentes com Passo a Passo</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brasil-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> 
+                        <span>Segredo da Engomagem Perfeita</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brasil-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> 
+                        <span>Lista de Materiais Baratos e Fornecedores</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brasil-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> 
+                        <span>BÔNUS: Script de Vendas Automáticas</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brasil-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> 
+                        <span>BÔNUS: Pack de Tags do Brasil para Imprimir</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brasil-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg> 
+                        <span>BÔNUS: Planilha de Custos e Lucro</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CAIXA DE PREÇO -->
+            <div class="bg-white rounded-[28px] p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)] max-w-sm mx-auto mb-8">
+                <p class="text-[#64748b] font-medium text-xl mb-1">Por apenas</p>
+                <div class="text-brasil-blue font-bold text-[64px] leading-none mb-3 tracking-tight font-heading">
+                    R$ 19,90
+                </div>
+                <p class="text-[#94a3b8] font-medium text-[15px]">
+                    <span class="line-through">De R$ 147,00</span> (pagamento único)
+                </p>
+            </div>
+            
+            <div class="max-w-sm mx-auto">
+                <a href="https://mariih.mycartpanda.com/checkout/210959205:1" target="_blank" class="block w-full btn-success text-white font-bold text-xl py-5 rounded-2xl transition-transform transform hover:scale-105 tracking-wide mb-3">
+                    COMPRAR AGORA
+                </a>
+                <p class="text-sm text-gray-600 font-semibold flex items-center justify-center gap-1.5">
+                    🔒 Ambiente 100% Seguro e Criptografado
+                </p>
+            </div>
+
+            <!-- GARANTIA -->
+            <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 max-w-2xl mx-auto bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <img src="imagem8.webp" onerror="this.onerror=null; this.src='https://placehold.co/100x100/002776/ffffff?text=7+Dias';" alt="Garantia de 7 dias" class="w-24 h-auto object-contain flex-shrink-0" loading="lazy">
+                <div class="text-left">
+                    <h4 class="font-bold text-gray-900 text-lg mb-1">Garantia Incondicional de 7 Dias</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">O risco é todo nosso. Se você não conseguir aprender ou achar que não é pra você, devolvemos 100% do seu dinheiro. Sem burocracia, basta enviar um e-mail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FAQ (PERGUNTAS FREQUENTES) -->
+    <section class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-gray-900 tracking-tight">Perguntas Frequentes</h2>
+                <p class="text-lg text-gray-600 mt-2 font-medium">Tudo o que você precisa saber antes de começar.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="group bg-gray-50 rounded-2xl border border-gray-100 hover:border-brasil-green transition-colors [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-gray-900 font-bold text-lg md:text-[17px]">
+                        Nunca fiz crochê na vida. Esse curso é para mim?
+                        <span class="relative h-5 w-5 shrink-0 text-brasil-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" /></svg>
+                        </span>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-600 leading-relaxed text-[15px]">
+                        <strong>Com certeza!</strong> O material foi pensado exatamente para iniciantes. Temos um módulo inicial que te ensina a segurar na agulha e fazer os primeiros pontos. É muito mais fácil do que parece!
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="group bg-gray-50 rounded-2xl border border-gray-100 hover:border-brasil-green transition-colors [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-gray-900 font-bold text-lg md:text-[17px]">
+                        Os materiais para começar são caros?
+                        <span class="relative h-5 w-5 shrink-0 text-brasil-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" /></svg>
+                        </span>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-600 leading-relaxed text-[15px]">
+                        <strong>Não!</strong> É um dos artesanatos mais baratos para se iniciar. Com cerca de R$ 15 a R$ 20 você compra um novelo de linha, a agulha e os ganchinhos (anzóis) para fazer seus primeiros 15 a 20 pares de brincos. A margem de lucro é gigantesca.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="group bg-gray-50 rounded-2xl border border-gray-100 hover:border-brasil-green transition-colors [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-gray-900 font-bold text-lg md:text-[17px]">
+                        Como vou receber o acesso às aulas?
+                        <span class="relative h-5 w-5 shrink-0 text-brasil-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" /></svg>
+                        </span>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-600 leading-relaxed text-[15px]">
+                        Assim que seu pagamento for aprovado (Pix e Cartão são na hora), você receberá um e-mail com seu login e senha para acessar a plataforma de alunos, onde todas as aulas e bônus estarão liberados.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="group bg-gray-50 rounded-2xl border border-gray-100 hover:border-brasil-green transition-colors [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-gray-900 font-bold text-lg md:text-[17px]">
+                        E se eu não souber como vender?
+                        <span class="relative h-5 w-5 shrink-0 text-brasil-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 transition-opacity duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" /></svg>
+                        </span>
+                    </summary>
+                    <div class="px-5 pb-5 text-gray-600 leading-relaxed text-[15px]">
+                        Na época da Copa, esses produtos se vendem sozinhos! Além disso, você ganhará o <strong>Script de Vendas</strong>. São mensagens prontas que você só precisa copiar e colar no WhatsApp para receber encomendas de familiares, amigas e vizinhas.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER LEGAL -->
+    <footer class="bg-gray-900 py-10 text-center border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-4">
+            <p class="text-sm text-gray-400 font-medium mb-4">© 2026. Todos os direitos reservados.</p>
+            <p class="text-[11px] text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                Este site não faz parte do site do Facebook ou da Meta Platforms Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial da Meta Platforms, Inc. Os resultados podem variar de pessoa para pessoa. Nenhuma informação contida neste produto deve ser interpretada como uma afirmação da obtenção de resultados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
