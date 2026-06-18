@@ -143,10 +143,11 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 
-                <div class="text-center lg:text-left flex flex-col justify-center mt-4">
+                <!-- Usando 'contents' no mobile para permitir a reordenação dos itens com a imagem -->
+                <div class="contents lg:flex lg:flex-col lg:justify-center">
                     
-                    <!-- Headline Estilo Imagem -->
-                    <div class="transform -rotate-3 -skew-x-6 mb-8 mt-4">
+                    <!-- Headline Estilo Imagem (Ordem 1 no mobile) -->
+                    <div class="order-1 text-center lg:text-left transform -rotate-3 -skew-x-6 mb-2 lg:mb-8 mt-4">
                         <h1 class="font-heading font-black leading-[0.95] tracking-tight flex flex-col items-center lg:items-start">
                             <span class="text-white text-6xl sm:text-7xl md:text-[5.5rem] hero-text-shadow">BRINCO</span>
                             <span class="text-white text-6xl sm:text-7xl md:text-[5.5rem] hero-text-shadow flex items-center gap-3">
@@ -157,8 +158,8 @@
                         </h1>
                     </div>
                     
-                    <!-- Subtítulo e Botão em um card para leitura clara -->
-                    <div class="bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-3xl shadow-2xl border-2 border-white/50 inline-block max-w-xl mx-auto lg:mx-0">
+                    <!-- Subtítulo e Botão em um card para leitura clara (Ordem 3 no mobile) -->
+                    <div class="order-3 mt-4 lg:mt-0 bg-white/95 backdrop-blur-sm p-6 sm:p-8 rounded-3xl shadow-2xl border-2 border-white/50 w-full max-w-xl mx-auto lg:mx-0">
                         <div class="inline-block bg-[#ffdf00] text-[#002776] font-bold px-3 py-1 rounded-full text-xs mb-4 shadow-sm uppercase tracking-wider">
                             Oportunidade Imediata
                         </div>
@@ -178,7 +179,8 @@
                     </div>
                 </div>
 
-                <div class="relative mx-auto w-full max-w-md lg:max-w-lg mt-8 lg:mt-0">
+                <!-- Imagem (Ordem 2 no mobile - aparece entre a Headline e a Caixa Branca) -->
+                <div class="order-2 relative mx-auto w-full max-w-md lg:max-w-lg my-6 lg:my-0">
                     <!-- Placeholder simulando os brincos recortados flutuando -->
                     <img src="imagem1.webp" onerror="this.onerror=null; this.src='https://placehold.co/600x600/009c3b/ffdf00?text=Brincos+Girassol+Brasil';" alt="Brincos de Crochê do Brasil" class="relative z-10 w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.4)] animate-float hover:scale-105 transition-transform duration-500" fetchpriority="high">
                 </div>
